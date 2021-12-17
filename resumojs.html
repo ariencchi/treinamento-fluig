@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treinando JS</title>
+    <script>
+      // Função que muda o texto quando o botão for clicado
+      function funcao() {
+        document.getElementById('teste').innerHTML = 'Texto alterado'
+      }
+      // Função que muda o texto quando a seleção é alterada
+      function muda() {
+        document.getElementById('teste').innerHTML = 'Mudei o nome no select'
+      }
+
+      // Segunda parte (objetos)
+      function dados() {
+        var pessoa = {
+          Nome: 'Arien',
+          Complemento: 'the Witch',
+          Servidor: 'BR'
+        }
+        document.getElementById('frase').innerHTML =
+          pessoa.Nome +
+          ' ' +
+          pessoa.Complemento +
+          ' joga no servidor ' +
+          pessoa.Servidor
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Título</h1>
+    <p id="teste">Meu parágrafo</p>
+    <button type="button" onclick="funcao()">Alterar</button>
+    <br />
+    <br />
+    <select onchange="muda()">
+      <option>João</option>
+      <option>Maria</option>
+    </select>
+    <br />
+    <br />
+    <hr />
+    <br />
+    <button type="button" onclick="dados();">Botão</button>
+    <p id="frase"></p>
+    <hr />
+    <p id="carro"></p>
+    <script>
+      //Terceira parte (array)
+      // A diferença entre objeto e array é que enquanto objetos guardam variáveis dentro de variáveis (não muda), array "substitui" a variável principal, a partir da posição da variável na array.
+      // Nesse caso, o código de JS antes do html (p de id carro) não funcionou, precisei colocar depois.
+      var carros = ['Fusca', 'Kombi', 'Brasília']
+      document.getElementById('carro').innerHTML = carros[2]
+    </script>
+  </body>
+</html>
